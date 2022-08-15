@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.ticktock.views.ClockDigit
+        android:id="@+id/cd_timeClock_hours"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_37"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="?android:textColor"
+        app:time_unit="2" />
+
+    <View
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@drawable/circle"
+        app:layout_constraintBottom_toBottomOf="@+id/cd_timeClock_hours"
+        app:layout_constraintEnd_toEndOf="@id/guideline_37"
+        app:layout_constraintStart_toStartOf="@+id/guideline_37"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.33" />
+
+    <View
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@drawable/circle"
+        app:layout_constraintBottom_toBottomOf="@+id/cd_timeClock_hours"
+        app:layout_constraintEnd_toEndOf="@id/guideline_37"
+        app:layout_constraintStart_toStartOf="@+id/guideline_37"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.67" />
+
+    <com.example.ticktock.views.ClockDigit
+        android:id="@+id/cd_timeClock_minutes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_75"
+        app:layout_constraintStart_toEndOf="@+id/guideline_37"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="?android:textColor"
+        app:time_unit="1" />
+
+    <View
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:background="@drawable/circle"
+        app:layout_constraintBottom_toBottomOf="@+id/cd_timeClock_secs"
+        app:layout_constraintEnd_toEndOf="@id/guideline_75"
+        app:layout_constraintStart_toStartOf="@+id/guideline_75"
+        app:layout_constraintTop_toTopOf="@id/cd_timeClock_secs"
+        app:layout_constraintVertical_bias="0.33" />
+
+    <View
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:background="@drawable/circle"
+        app:layout_constraintBottom_toBottomOf="@+id/cd_timeClock_secs"
+        app:layout_constraintEnd_toEndOf="@id/guideline_75"
+        app:layout_constraintStart_toStartOf="@+id/guideline_75"
+        app:layout_constraintTop_toTopOf="@id/cd_timeClock_secs"
+        app:layout_constraintVertical_bias="0.66" />
+
+
+    <com.example.ticktock.views.ClockDigit
+        android:id="@+id/cd_timeClock_secs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cd_timeClock_minutes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline_75"
+        app:strokeColor="?android:textColor"
+        app:time_unit="0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_37"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.375" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_75"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
